@@ -1,9 +1,26 @@
-import React from 'react'
+import React, { use } from 'react'
 import {words} from '../constants/index.js'
 import Button from "../components/Button"
-import HeroExperience from "../components/HeroModels/HeroExperience"
+import HeroExperience from "../components/HeroModels/HeroExperience.jsx"
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 
 const Hero = () => {
+    useGSAP(() => {
+        gsap.fromTo('.hero-text h1',
+            {
+                y: 100,
+                opacity: 0,
+            },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 1.5,
+                stagger: 0.2,
+                ease: 'power2.out',
+            }
+        )
+    })
   return (
     <section id="hero" className ="relative overflow-hidden">
         <div className="absolute top-0 left-0 z-10">

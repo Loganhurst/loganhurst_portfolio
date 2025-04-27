@@ -4,6 +4,7 @@ import { OrbitControls } from '@react-three/drei'
 import { useMediaQuery } from 'react-responsive'
 import { Room } from './Room';
 import HeroLights from './HeroLights';
+import Particles from './Particles';
 
 
 
@@ -17,6 +18,7 @@ function HeroExperience() {
             className="">
             {/*Lights*/}
             <HeroLights/>
+            <Particles count={100} />
 
             <OrbitControls
                 enableZoom={!isTablet && !isMobile}
