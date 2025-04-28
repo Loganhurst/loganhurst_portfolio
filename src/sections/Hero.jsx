@@ -2,6 +2,7 @@ import React, { use } from 'react'
 import {words} from '../constants/index.js'
 import Button from "../components/Button"
 import HeroExperience from "../components/HeroModels/HeroExperience.jsx"
+import AnimatedCounter from '../components/AnimatedCounter.jsx'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 
@@ -72,7 +73,8 @@ const Hero = () => {
                     <HeroExperience />
                 </div>
             </figure>
-        </div>"
+        </div>
+        <AnimatedCounter />
     </section>
   )
 }
